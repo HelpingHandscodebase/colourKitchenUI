@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <div>@ 2025</div>
+    <div className="bg-black text-secondary">@ 2025</div>
   )
 }
 
