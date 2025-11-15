@@ -2,7 +2,7 @@ import Navigation from './navigation.tsx'
 
 const Header = () => {
   return (
-    <header>
+    <header className="bg-tirtiary">
       <Navigation />
     </header>
   )
