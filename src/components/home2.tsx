@@ -1,9 +1,31 @@
+import interior1 from '/img/interiors/design-possibilities-home-interiors.png';
+import interior2 from '/img/interiors/top-interior-designers.png';
+import interior3 from '/img/interiors/low-cost-interiors.png';
+import interior4 from '/img/interiors/warranty-home-interiors.png';
 
 
 const Home2 = () => {
   return (
-    <div>
-        <h2>Why Choose Colours Kitchen Homes ?</h2>
+    <div className="text-center mt-5">
+      <h2>Why Choose Colours Kitchen Homes ?</h2>
+      <div className="d-flex justify-content-center gap-5 mt-4">
+        <div className="text-center">
+          <img src={interior1} width={100} height={100} alt="Design Possibilities" />
+          <p>51040 Design Possibilities</p>
+        </div>
+        <div className="text-center">
+          <img src={interior2} width={100} height={100} alt="Extra Storage" />
+          <p>20% EXTRA Storage</p>
+        </div>
+        <div className="text-center">
+          <img src={interior3} width={100} height={100} alt="Low Cost EMIs" />
+          <p>No Cost EMIs</p>
+        </div>
+        <div className="text-center">
+          <img src={interior4} width={100} height={100} alt="Warranty" />
+          <p>Upto 25 years Warranty</p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 
 const Home10 = () => {
   return (
-    <div>
+    <div className="bg-light text-center">
         <h2>Ready To Design Your Dream Home ?</h2>
         <p>Book A Free Design Consultation With Our Expert Designers</p>
-        <div className="container mt-4">
+        <div className="container mt-4 pb-4">
             <button className="btn btn-danger">Colors Kitchen</button>
         </div>
     </div>
