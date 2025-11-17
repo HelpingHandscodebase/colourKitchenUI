@@ -4,17 +4,39 @@ import img3 from '/img/Photo/img3.jpg';
 
 const Home3 = () => {
   return (
-    <div className="bg-secondary">
-        <h2>Personalised Space Saving Solutions</h2>
-        <p>20% Extra Space Guaranteed</p>
-
-        <img src={img1} alt="xyz" width={1165} height={360} />
-        <img src={img2} alt="xyz" width={1165} height={360} />
-        <img src={img3} alt="xyz" width={1165} height={360} />
+    <div className="bg-dark-subtle">
+    <div className="container text-center py-5">
+        <h2 className="fw-semibold">Personalised Space Saving Solutions</h2>
+        <p className="text-muted mb-5">20% Extra Space Guaranteed</p>
+        <div className="row g-4 justify-content-evenly">
+          <div className="col-12 col-md-4">
+            <img
+              src={img1}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img2}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img3}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+        </div>
+        
 
         <div className="container mt-4">
-            <button className="btn btn-danger">Talk to our Space Saving Expert</button>
+            <button className="btn btn-light">Talk to our Space Saving Expert</button>
         </div>
+    </div>
     </div>
   )
 }

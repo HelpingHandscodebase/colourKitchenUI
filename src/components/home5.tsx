@@ -1,38 +1,89 @@
-import image1 from '/img/image1.png';
-import image2 from '/img/image2.png';
-import image3 from '/img/image3.png';
-import image4 from '/img/image4.png';
-import image5 from '/img/image5.png';
-import image6 from '/img/image6.png';
+import image1 from "/img/image1.png";
+import image2 from "/img/image2.png";
+import image3 from "/img/image3.png";
+import image4 from "/img/image4.png";
+import image5 from "/img/image5.png";
+import image6 from "/img/image6.png";
 
 const Home5 = () => {
   return (
-    <div>
+    <div className="container py-5">
+      <div className="text-center mb-5">
         <h2>What You Get</h2>
-        {/* <img src="/img/image1.png" alt="Innovative Storage" width={95} height={101} /> */}
-        <img src={image1} alt="Innovative Storage" width={95} height={101} />
-        <h5>Innovative Storage</h5>
-        <p>TV Unit, TV Back Panelling, Crockery Unit, Bar Unit, Bookshelf.</p>
-        <img src={image2} alt="Bedroom" width={95} height={101} />
-        <h5>Bedroom</h5>
-        <p>Wardrobes, TV Unit, Bed with Storage, Dressing Unit, Study Unit.</p>
-        <img src={image3} alt="Kitchen" width={95} height={101} />
-        <h5>Kitchen</h5>
-        <p>Countertops, Backsplashes, Accessories, Shutters, Storage.</p>
-        <img src={image4} alt="Innovative Storage" width={95} height={101} />
-        <h5>Innovative Storage</h5>
-        <p>Janitor Unit, Skirting Drawer, Pantry Pull Out, Appliance Garage, Hidden Bar Cabinet, Magic Corner.</p>
-        <img src={image5} alt="Interior Design Services" width={95} height={101} />
-        <h5>Interior Design Services</h5>
-        <p>False Ceiling, Wall Panelling, Decor Accents, Lighting, Furnishing, Appliances.</p>
-        <img src={image6} alt="Home Improvement Services" width={95} height={101} />
-        <h5>Home Improvement Services</h5>
-        <p>Painting, Bathroom Remodelling, Tiling, Plumbing, Electrical, Civil Work, Deep Cleaning.</p>
-        <div className="container mt-4">
-            <button className="btn btn-danger">Get Free Estimate</button>
+      </div>
+      <div className="row g-4">
+        {/* 1 — Innovative Storage */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image1} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Innovative Storage</h6>
+            <p className="mb-0">
+              TV Unit, TV Back Panelling, Crockery Unit, Bar Unit, Bookshelf.
+            </p>
+          </div>
         </div>
-    </div>
-  )
-}
+        {/* 2 — Bedroom */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image2} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Bedroom</h6>
+            <p className="mb-0">
+              Wardrobes, TV Unit, Bed with Storage, Dressing Unit, Study Unit.
+            </p>
+          </div>
+        </div>
+        {/* 3 — Kitchen */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image3} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Kitchen</h6>
+            <p className="mb-0">
+              Countertops, Backsplashes, Accessories, Shutters, Storage.
+            </p>
+          </div>
+        </div>
 
-export default Home5
+        {/* 4 — Innovative Storage 2 */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image4} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Innovative Storage</h6>
+            <p className="mb-0">
+              Janitor Unit, Skirting Drawer, Pantry Pull Out, Appliance Garage,
+              Hidden Bar Cabinet, Magic Corner.
+            </p>
+          </div>
+        </div>
+
+        {/* 5 — Interior Design Services */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image5} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Interior Design Services</h6>
+            <p className="mb-0">
+              False Ceiling, Wall Panelling, Decor Accents, Lighting,
+              Furnishing, Appliances.
+            </p>
+          </div>
+        </div>
+
+        {/* 6 — Home Improvement */}
+        <div className="col-12 col-md-6 col-lg-4 d-flex">
+          <img src={image6} alt="Icon" width={95} className="me-3" />
+          <div>
+            <h6 className="fw-bold">Home Improvement Services</h6>
+            <p className="mb-0">
+              Painting, Bathroom Remodelling, Tiling, Plumbing, Electrical,
+              Civil Work, Deep Cleaning.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="container text-center mt-4">
+        <button className="btn btn-light">Get Free Estimate</button>
+      </div>
+    </div>
+  );
+};
+
+export default Home5;

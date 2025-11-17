@@ -6,7 +6,7 @@ import interior4 from '/img/interiors/warranty-home-interiors.png';
 
 const Home2 = () => {
   return (
-    <div className="text-center mt-5">
+    <div className="container text-center mt-5">
       <h2>Why Choose Colours Kitchen Homes ?</h2>
       <div className="d-flex justify-content-center gap-5 mt-4">
         <div className="text-center">

@@ -4,36 +4,96 @@ import img3 from '/img/Photo/img3.jpg';
 
 const Home4 = () => {
   return (
-    <div>
-        <h2>Smart Modular Kitchen Designs</h2>
-        <img src={img1} alt="Stylish Dining Hall Design" width={1165} height={360} />
-        <p>Stylish Dining Hall Design</p>
-        <img src={img2} alt="Stylish Bedroom Design" width={1165} height={360} />
-        <p>Stylish Bedroom Design</p>
-        <img src={img3} alt="A Minimal with Blue Toned Bedroom" width={1165} height={360} />
-        <p>A Minimal with Blue Toned Bedroom</p>
-        <div className="container mt-4">
-            <button className="btn btn-danger">Book Your Dream Kitchen</button>
+    <div className="container text-center py-5">
+        <h2 className="fw-semibold">Smart Modular Kitchen Designs</h2>
+        <div className="row g-4 justify-content-evenly">
+          <div className="col-12 col-md-4">
+            <img
+              src={img1}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Dining Hall Design"
+            />
+            <p>Stylish Dining Hall Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img2}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Bedroom Design"
+            />
+            <p>Stylish Bedroom Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img3}
+              className="img-fluid rounded shadow-sm"
+              alt="A Minimal with Blue Toned Bedroom"
+            />
+            <p>A Minimal with Blue Toned Bedroom</p>
+          </div>
         </div>
-        <h2>Bedroom Interiors For Comfort And Style</h2>
-        <img src={img1} alt="Stylish Dining Hall Design" width={1165} height={360} />
-        <p>Stylish Dining Hall Design</p>
-        <img src={img2} alt="Stylish Bedroom Design" width={1165} height={360} />
-        <p>Stylish Bedroom Design</p>
-        <img src={img3} alt="A Minimal with Blue Toned Bedroom" width={1165} height={360} />
-        <p>A Minimal with Blue Toned Bedroom</p>
         <div className="container mt-4">
-            <button className="btn btn-danger">Meet Our Designers</button>
+            <button className="btn btn-light fw-bold">Book Your Dream Kitchen</button>
         </div>
-        <h2>Living Room Interiors For A Fabulous First Impression</h2>
-        <img src={img1} alt="Stylish Dining Hall Design" width={1165} height={360} />
-        <p>Stylish Dining Hall Design</p>
-        <img src={img2} alt="Stylish Bedroom Design" width={1165} height={360} />
-        <p>Stylish Bedroom Design</p>
-        <img src={img3} alt="A Minimal with Blue Toned Bedroom" width={1165} height={360} />
-        <p>A Minimal with Blue Toned Bedroom</p>
+        <h2 className="fw-semibold">Bedroom Interiors For Comfort And Style</h2>
+        <div className="row g-4 justify-content-evenly">
+          <div className="col-12 col-md-4">
+            <img
+              src={img1}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Dining Hall Design"
+            />
+            <p>Stylish Dining Hall Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img2}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Bedroom Design"
+            />
+            <p>Stylish Bedroom Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img3}
+              className="img-fluid rounded shadow-sm"
+              alt="A Minimal with Blue Toned Bedroom"
+            />
+            <p>A Minimal with Blue Toned Bedroom</p>
+          </div>
+        </div>
         <div className="container mt-4">
-            <button className="btn btn-danger">Book A Free Consultation</button>
+            <button className="btn btn-light fw-bold">Meet Our Designers</button>
+        </div>
+        <h2 className="fw-semibold">Living Room Interiors For A Fabulous First Impression</h2>
+        <div className="row g-4 justify-content-evenly">
+          <div className="col-12 col-md-4">
+            <img
+              src={img1}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Dining Hall Design"
+            />
+            <p>Stylish Dining Hall Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img2}
+              className="img-fluid rounded shadow-sm"
+              alt="Stylish Bedroom Design"
+            />
+            <p>Stylish Bedroom Design</p>
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img3}
+              className="img-fluid rounded shadow-sm"
+              alt="A Minimal with Blue Toned Bedroom"
+            />
+            <p>A Minimal with Blue Toned Bedroom</p>
+          </div>
+        </div>
+        <div className="container mt-4">
+            <button className="btn btn-light fw-bold">Book A Free Consultation</button>
         </div>
     </div>
   )

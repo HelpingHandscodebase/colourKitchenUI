@@ -4,13 +4,32 @@ import img3 from '/img/Photo/img3.jpg';
 
 const Home7 = () => {
   return (
-    <div>
-        <h2>51040 Design Possibilities In Our Experience Centres</h2>
-        <h2>1 Cities | 10 Experience Centres</h2>
-
-        <img src={img1} alt="xyz" width={1165} height={360} />
-        <img src={img2} alt="xyz" width={1165} height={360} />
-        <img src={img3} alt="xyz" width={1165} height={360} />
+    <div className="container text-center py-5">
+        <h2 className="fw-semibold">51040 Design Possibilities In Our Experience Centres</h2>
+        <p className="text-muted mb-5">1 Cities | 10 Experience Centres</p>
+        <div className="row g-4 justify-content-evenly">
+          <div className="col-12 col-md-4">
+            <img
+              src={img3}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img2}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+          <div className="col-12 col-md-4">
+            <img
+              src={img1}
+              className="img-fluid rounded shadow-sm"
+              alt="xyz"
+            />
+          </div>
+        </div>
     </div>
   )
 }
