@@ -12,7 +12,7 @@ import About from './components/about.tsx'
 import Project from './project.tsx'
 import Services from './components/services.tsx'
 import GetFreeQuote from './components/getFreeQuote.tsx'
-import ConsultationForm from "./components/consultationForm.tsx";
+// import ConsultationForm from "./components/consultationForm.tsx";
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/getFreeQuote" element={<GetFreeQuote />} />
         </Routes>
-      <ConsultationForm />
+      {/* <ConsultationForm /> */}
       <Footer />
     </BrowserRouter>
   )
