@@ -4,8 +4,7 @@ import img3 from '/img/Photo/img3.jpg';
 
 const Home3 = () => {
   return (
-    <div className="bg-dark-subtle">
-    <div className="container text-center py-5">
+    <div className="container bg-dark-subtle text-center py-5">
         <h2 className="fw-semibold">Personalised Space Saving Solutions</h2>
         <p className="text-muted mb-5">20% Extra Space Guaranteed</p>
         <div className="row g-4 justify-content-evenly">
@@ -36,7 +35,6 @@ const Home3 = () => {
         <div className="container mt-4">
             <button className="btn btn-light">Talk to our Space Saving Expert</button>
         </div>
-    </div>
     </div>
   )
 }

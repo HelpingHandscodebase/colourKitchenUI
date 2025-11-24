@@ -5,6 +5,7 @@ import Header from './components/header.tsx'
 import Footer from './components/footer.tsx'
 import Content from './components/content.tsx'
 
+import Navigation from './components/navigation.tsx'
 import ColorsKitchen from "./components/colorsKitchen.tsx";
 import Home from './components/home.tsx'
 import About from './components/about.tsx'
@@ -18,6 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/colorsKitchen" element={<ColorsKitchen />} />

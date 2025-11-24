@@ -1,9 +1,7 @@
-import Navigation from './navigation.tsx'
 
 const Header = () => {
   return (
-    <header className="bg-light">
-      <Navigation />
+    <header className="bg-light" style={{ height: "50px" }}>
     </header>
   )
 }

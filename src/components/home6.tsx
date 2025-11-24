@@ -44,33 +44,28 @@ const Home6 = () => {
             </p>
           </div>
         </div>
-        {/* Bottom Images */}
-      <div className="row g-4 justify-content-center">
+        <div className="row g-4 justify-content-center">
+          <div className="col-12 col-md-6 col-lg-5">
+            <img
+              src={family1}
+              alt="Family Happy Home"
+              className="img-fluid rounded shadow-sm"
+            />
+          </div>
 
-        <div className="col-12 col-md-6 col-lg-5">
-          <img
-            src={family1}
-            alt="Family Happy Home"
-            className="img-fluid rounded shadow-sm"
-          />
-        </div>
+          <div className="col-12 col-md-6 col-lg-5">
+            <img
+              src={family2}
+              alt="Family Happy Home"
+              className="img-fluid rounded shadow-sm"
+            />
+          </div>
 
-        <div className="col-12 col-md-6 col-lg-5">
-          <img
-            src={family2}
-            alt="Family Happy Home"
-            className="img-fluid rounded shadow-sm"
-          />
-        </div>
-        {/* <img src={family1} alt="family1" width={540} height={324} />
-
-        <img src={family2} alt="family2" width={540} height={324} /> */}
-
-        <div className="container mt-4 pb-4">
-          <button className="btn btn-light">Book A Free Consultation</button>
+          <div className="container mt-4 pb-4">
+            <button className="btn btn-light">Book A Free Consultation</button>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
