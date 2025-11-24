@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Navigation = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* NAVBAR FOR DESKTOP + TABLET */}
@@ -55,7 +57,7 @@ const Navigation = () => {
               </li>
 
               <li>
-                <button className="btn btn-danger px-4 py-2 rounded-3 shadow-sm">
+                <button onClick={() => navigate("./about")} className="btn btn-danger px-4 py-2 rounded-3 shadow-sm">
                   Get Free Quote
                 </button>
               </li>
@@ -106,7 +108,7 @@ const Navigation = () => {
             </li>
 
             <li>
-              <button className="btn btn-danger w-100 shadow-sm" data-bs-dismiss="offcanvas">
+              <button onClick={() => navigate("./about")} className="btn btn-danger w-100 shadow-sm" data-bs-dismiss="offcanvas">
                 Get Free Quote
               </button>
             </li>
