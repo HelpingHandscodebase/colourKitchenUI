@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import '../styles/PdfUpload.css'
 
@@ -10,6 +11,7 @@ interface PdfUploadProps {
  * A React component to handle unsigned PDF uploads to Cloudinary and display a preview.
  */
 export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
+  const navigate = useNavigate();
   const [file, setFile] = useState<File | null>(null)
   const [uploading, setUploading] = useState(false)
   const [viewerUrl, setViewerUrl] = useState<string | null>(null)
@@ -17,10 +19,10 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
 
   // --- Configuration ---
   // Ensure 'defjdv5sk' is your correct Cloud Name
-  const CLOUD_NAME = 'defjdv5sk' 
+  const CLOUD_NAME = 'dri5cpmmt' 
   // Ensure 'PDFuploader' is the correct name of your Unsigned Upload Preset
   const UPLOAD_PRESET = 'PDFuploader' 
-  const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`
+  const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`
 
   // --- Handlers ---
 
@@ -60,6 +62,9 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
     try {
       const res = await axios.post(UPLOAD_URL, data)
       const url: string = res.data.secure_url
+
+       // 🔥 ADD THIS
+  // navigate("/", { state: { url } });
       
       // *** THE FIX ***
       // We rely on the URL exactly as Cloudinary returns it (res.data.secure_url), 
@@ -142,6 +147,16 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
             title={`Preview of ${viewerUrl.substring(viewerUrl.lastIndexOf('/') + 1)}`}
             style={{ width: '100%', height: 600, border: '1px solid #ddd' }}
           />
+          <button
+  onClick={() => {
+    console.log("BUTTON CLICK URL =", viewerUrl);
+    navigate("/", { state: { pdfUrl: viewerUrl } });
+  }}
+>
+  View on Home Page
+</button>
+
+
         </div>
       )}
     </div>

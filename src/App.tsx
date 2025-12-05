@@ -1,39 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { PdfUpload } from './components/PdfUpload'
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home";
+import { PdfUpload } from "./components/PdfUpload";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  const handleUploadSuccess = (url: string) => {
-    console.log('PDF uploaded:', url)
-  }
+  // const handleUploadSuccess = (url: string) => {
+  //   console.log('PDF uploaded:', url)
+  // }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Hello Colour Kitchens</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <PdfUpload onUploadSuccess={handleUploadSuccess} />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more 
-      </p>
+    <><BrowserRouter>
+      
+      {/* <h1>Hello Colour Kitchens</h1> */}
+      
+      {/* <PdfUpload onUploadSuccess={handleUploadSuccess} /> */}
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/upload" element={<PdfUpload />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
