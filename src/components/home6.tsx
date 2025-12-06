@@ -62,7 +62,7 @@ const Home6 = () => {
           </div>
 
           <div className="container mt-4 pb-4">
-            <button className="btn btn-light">Book A Free Consultation</button>
+            <button className="btn btn-danger shadow-sm">Book A Free Consultation</button>
           </div>
         </div>
       </div>

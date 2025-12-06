@@ -33,9 +33,11 @@ const Home4 = () => {
           </div>
         </div>
         <div className="container mt-4">
-            <button className="btn btn-light fw-bold">Book Your Dream Kitchen</button>
+          <button  className="btn btn-danger shadow-sm" data-bs-dismiss="offcanvas">
+                Book Your Dream Kitchen
+            </button>
         </div>
-        <h2 className="fw-semibold">Bedroom Interiors For Comfort And Style</h2>
+        <h2 className="fw-semibold my-4">Bedroom Interiors For Comfort And Style</h2>
         <div className="row g-4 justify-content-evenly">
           <div className="col-12 col-md-4">
             <img
@@ -63,9 +65,11 @@ const Home4 = () => {
           </div>
         </div>
         <div className="container mt-4">
-            <button className="btn btn-light fw-bold">Meet Our Designers</button>
+          <button  className="btn btn-danger shadow-sm" data-bs-dismiss="offcanvas">
+                Meet Our Designers
+            </button>
         </div>
-        <h2 className="fw-semibold">Living Room Interiors For A Fabulous First Impression</h2>
+        <h2 className="fw-semibold my-4">Living Room Interiors For A Fabulous First Impression</h2>
         <div className="row g-4 justify-content-evenly">
           <div className="col-12 col-md-4">
             <img
@@ -93,7 +97,9 @@ const Home4 = () => {
           </div>
         </div>
         <div className="container mt-4">
-            <button className="btn btn-light fw-bold">Book A Free Consultation</button>
+          <button  className="btn btn-danger  shadow-sm" data-bs-dismiss="offcanvas">
+                Book A Free Consultation
+            </button>
         </div>
     </div>
   )

@@ -88,7 +88,7 @@ const ConsultationForm = () => {
         </div>
 
         {/* SUBMIT BUTTON */}
-        <button className="btn btn-danger w-100 mt-4 fw-bold">
+        <button className="btn btn-danger mt-4 fw-bold">
           Book a Free Consultation
         </button>
       </form>

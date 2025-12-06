@@ -80,7 +80,7 @@ const Home5 = () => {
         </div>
       </div>
       <div className="container text-center mt-4">
-        <button className="btn btn-light">Get Free Estimate</button>
+        <button className="btn btn-danger  shadow-sm">Get Free Estimate</button>
       </div>
     </div>
   );

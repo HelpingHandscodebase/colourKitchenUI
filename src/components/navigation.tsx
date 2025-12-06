@@ -3,6 +3,12 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Navigation = () => {
   const navigate = useNavigate();
+  const gradientTextStyle = {
+  fontSize: '40px',
+   background: 'radial-gradient(circle, red, yellow)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+}
 
   return (
     <>
@@ -11,7 +17,7 @@ const Navigation = () => {
         <div className="container-fluid">
 
           {/* Brand */}
-          <Link className="navbar-brand fw-bold" to="/">
+          <Link className="navbar-brand fw-bold py-4" to="/" style={gradientTextStyle} >
             Colors Kitchen
           </Link>
 
@@ -47,7 +53,7 @@ const Navigation = () => {
 
               <li className="nav-item">
                 <a
-                  className="nav-link fs-4"
+                  className="nav-link fs-4 d-flex align-items-center"
                   href="https://wa.me/987654123"
                   target="_blank"
                   rel="noopener noreferrer"

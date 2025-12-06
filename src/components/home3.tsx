@@ -33,7 +33,9 @@ const Home3 = () => {
         
 
         <div className="container mt-4">
-            <button className="btn btn-light">Talk to our Space Saving Expert</button>
+          <button  className="btn btn-danger shadow-sm" data-bs-dismiss="offcanvas">
+                Talk to our Space Saving Expert
+            </button>
         </div>
     </div>
   )
