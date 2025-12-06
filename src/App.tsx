@@ -1,4 +1,6 @@
 import './App.css'
+import Header from './components/header'
+import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import { PdfUpload } from "./components/PdfUpload";
@@ -10,7 +12,10 @@ function App() {
   // }
 
   return (
-    <><BrowserRouter>
+    <>
+    <Header />
+    <div className="container">
+    <BrowserRouter> 
       
       {/* <h1>Hello Colour Kitchens</h1> */}
       
@@ -21,6 +26,8 @@ function App() {
         <Route path="/upload" element={<PdfUpload />} />
       </Routes>
     </BrowserRouter>
+    </div>
+    <Footer />
     </>
   )
 }

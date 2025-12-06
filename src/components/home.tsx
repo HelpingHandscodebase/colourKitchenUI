@@ -40,19 +40,19 @@ const Home = () => {
 
   return (
     <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: "column",
-        alignItems: "center",
-        paddingTop: "20px",
-      }}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   flexDirection: "column",
+      //   alignItems: "center",
+      //   paddingTop: "20px",
+      // }}
     >
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
       
       {/* Optional: Show page count while loading */}
       {numPages === null && <p>Loading document...</p>}
-      {numPages !== null && <p>Total Pages: {numPages}</p>}
+      {/* {numPages !== null && <p>Total Pages: {numPages}</p>} */}
 
       <Document
         file={viewerUrl}
