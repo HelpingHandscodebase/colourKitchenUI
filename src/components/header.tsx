@@ -8,7 +8,7 @@ const Header: React.FC = () => {
             <img 
         src={Logo} 
         alt="Logo" 
-        style={{ height: "40px", width: "110px", objectFit: "cover", marginRight: "12px" }}
+        style={{ height: "60px", width: "110px", objectFit: "cover", marginRight: "12px" }}
       />
       <h2 className="text-white m-0"></h2>
         </div>
