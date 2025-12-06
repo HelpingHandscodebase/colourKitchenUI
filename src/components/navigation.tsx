@@ -54,7 +54,7 @@ const Navigation = () => {
               <li className="nav-item">
                 <a
                   className="nav-link fs-4 d-flex align-items-center"
-                  href="https://wa.me/987654123"
+                  href="https://wa.me/9993690392"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
