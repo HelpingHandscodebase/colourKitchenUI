@@ -19,7 +19,7 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
 
   // --- Configuration ---
   // Ensure 'defjdv5sk' is your correct Cloud Name
-  const CLOUD_NAME = 'dri5cpmmt' 
+  const CLOUD_NAME = 'defjdv5sk' 
   // Ensure 'PDFuploader' is the correct name of your Unsigned Upload Preset
   const UPLOAD_PRESET = 'PDFuploader' 
   const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`
@@ -106,7 +106,6 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
     <div className="pdf-upload-container">
       <h2>PDF Uploader & Viewer 📄</h2>
       <form onSubmit={handleSubmit} className="pdf-upload-form">
-        <div className="file-input-wrapper">
           <input
             type="file"
             accept="application/pdf"
@@ -118,7 +117,6 @@ export function PdfUpload({ onUploadSuccess }: PdfUploadProps) {
           <label className="file-label" htmlFor="pdf-input">
             {file ? `Selected: ${file.name}` : 'Click here to choose PDF'}
           </label>
-        </div>
 
         <button 
           type="submit" 

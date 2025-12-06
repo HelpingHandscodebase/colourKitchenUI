@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <Header />
-    <div className="container">
+    <div className="container d-flex justify-content-center align-items-center min-vh-100">
     <BrowserRouter> 
       
       {/* <h1>Hello Colour Kitchens</h1> */}
