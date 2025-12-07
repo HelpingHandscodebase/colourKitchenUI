@@ -23,7 +23,7 @@ import 'react-pdf/dist/Page/TextLayer.css';
  * A component to display a PDF using the react-pdf library.
  * It expects the PDF URL to be passed via React Router's state.
  */
-export function PdfViewer() {
+export function PdfUpload() {
   const location = useLocation();
   // Retrieve the pdfUrl passed from the PdfUpload component's navigation state
   const pdfUrl = location.state?.pdfUrl;

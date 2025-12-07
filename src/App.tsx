@@ -3,7 +3,8 @@ import Header from './components/header'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
-import { PdfUpload } from "./components/PdfUpload";
+// 🛠️ RESOLVED: Changed named import { PdfUpload } to default import PdfUpload
+import { PdfUpload }from "./components/PdfUpload"; 
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/upload" element={<PdfUpload />} />
+        {/* Note: If PdfUpload expects the onUploadSuccess prop, you'll need to pass it here: */}
+        {/* <Route path="/upload" element={<PdfUpload onUploadSuccess={() => {}} />} /> */}
+        <Route path="/upload" element={<PdfUpload />} /> 
       </Routes>
     </BrowserRouter>
     </div>
