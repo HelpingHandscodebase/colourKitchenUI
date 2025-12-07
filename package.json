@@ -1,5 +1,6 @@
 {
   "name": "colourkitchenui",
+  "install": "npm install --legacy-peer-deps",
   "private": true,
   "version": "0.0.0",
   "type": "module",
