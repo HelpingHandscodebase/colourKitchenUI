@@ -18,13 +18,21 @@ const ConsultationForm = () => {
   };
 
   return (
-    <div className="container p-4 bg-white shadow rounded" style={{ maxWidth: "600px" }}>
+    <div
+  className="py-1 px-2 p-md-4 rounded bg-white"
+  style={{
+    width: "100%",
+    margin: "0"
+  }}
+>
+
       <h2 className="text-center fw-bold">Colours Kitchen</h2>
-      <h4 className="text-center mt-3">Get a free design consultation</h4>
+      <h4 className="text-center mt-2">Get a free design consultation</h4>
 
       <form onSubmit={handleSubmit} className="mt-4">
+
         {/* PROPERTY TYPE */}
-        <label className="fw-semibold fs-5">Property type</label>
+        <label className="fw-semibold fs-5">Property Type</label>
         <div className="d-flex gap-2 my-2 flex-wrap">
           {["1 BHK", "2 BHK", "3 BHK", "4+ BHK/Duplex"].map((item) => (
             <button
@@ -56,7 +64,7 @@ const ConsultationForm = () => {
         <input
           type="text"
           className="form-control mt-3"
-          placeholder="Name"
+          placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -67,7 +75,7 @@ const ConsultationForm = () => {
           <input
             type="tel"
             className="form-control"
-            placeholder="Enter phone number"
+            placeholder="Enter mobile number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
@@ -88,9 +96,14 @@ const ConsultationForm = () => {
         </div>
 
         {/* SUBMIT BUTTON */}
-        <button className="btn btn-danger mt-4 fw-bold">
+        <button className="btn btn-danger mt-4 w-100 fw-bold">
           Book a Free Consultation
         </button>
+
+        <p className="text-center mt-2" style={{ fontSize: "12px" }}>
+          By submitting, you consent to our{" "}
+          <a href="#">privacy policy</a> & <a href="#">terms of use</a>.
+        </p>
       </form>
     </div>
   );

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 
-import img1 from '/img/Photo/img1.jpg';
-import img2 from '/img/Photo/img2.jpg';
-import img3 from '/img/Photo/img3.jpg';
-import img4 from '/hero.jpg';
+import img1 from "/colours-kitchen-img/colours-kitchen.jpg";
+import img2 from "/colours-kitchen-img/colours-kitchen1.jpg";
+import img3 from "/colours-kitchen-img/colours-kitchen2.jpg";
+import img4 from "/colours-kitchen-img/colours-kitchen3.jpg";
+import img5 from "/colours-kitchen-img/colours-kitchen4.jpg";
 
 // Slide Data — Image + Text
 const slides = [
@@ -11,39 +12,40 @@ const slides = [
   { img: img2, title: "A TV Unit With Hidden Storage Behind" },
   { img: img3, title: "A Magic Pull-Out To Store Your Daily Utensils" },
   { img: img4, title: "Maximise Your Modular Kitchen Storage" },
+  { img: img5, title: "Smart Interior Solutions For Your Home" }
 ];
 
-const Home3 = () => {
+export default function BedRoomInteriors() {
   const [startIndex, setStartIndex] = useState(0);
-    const [visibleCount, setVisibleCount] = useState(3);
-  
-    // Handle responsive view
-    useEffect(() => {
-      const updateView = () => {
-        if (window.innerWidth < 768) setVisibleCount(1);
-        else setVisibleCount(3);
-      };
-  
-      updateView();
-      window.addEventListener("resize", updateView);
-      return () => window.removeEventListener("resize", updateView);
-    }, []);
-  
-    // Next / Prev
-    const next = () =>
-      setStartIndex((prev) => (prev + 1) % slides.length);
-  
-    const prev = () =>
-      setStartIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  
-    // Compute visible cards
-    const visibleSlides = Array.from({ length: visibleCount }).map(
-      (_, i) => slides[(startIndex + i) % slides.length]
-    );
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  // Handle responsive view
+  useEffect(() => {
+    const updateView = () => {
+      if (window.innerWidth < 768) setVisibleCount(1);
+      else setVisibleCount(3);
+    };
+
+    updateView();
+    window.addEventListener("resize", updateView);
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
+
+  // Next / Prev
+  const next = () =>
+    setStartIndex((prev) => (prev + 1) % slides.length);
+
+  const prev = () =>
+    setStartIndex((prev) => (prev - 1 + slides.length) % slides.length);
+
+  // Compute visible cards
+  const visibleSlides = Array.from({ length: visibleCount }).map(
+    (_, i) => slides[(startIndex + i) % slides.length]
+  );
+
   return (
-    <div className="container bg-dark-subtle text-center py-5">
-        <div className="container text-center py-2">
-      <h2 className="fw-semibold">Smart Modular Kitchen Designs</h2>
+    <div className="container text-center py-5">
+      <h2 className="fw-semibold mt-0">Bedroom Interiors For Comfort And Style</h2>
       <div className="position-relative">
 
         {/* Left Button */}
@@ -105,7 +107,7 @@ const Home3 = () => {
                 width: i === startIndex ? "12px" : "10px",
                 height: i === startIndex ? "12px" : "10px",
                 borderRadius: "50%",
-                backgroundColor: i === startIndex ? "#FFFFFF" : "#d3d3d3",
+                backgroundColor: i === startIndex ? "#6c757d" : "#d3d3d3",
                 transition: "0.3s",
                 cursor: "pointer"
               }}
@@ -115,12 +117,9 @@ const Home3 = () => {
       )}
       <div className="container mt-4">
           <button  className="btn btn-danger shadow-sm" data-bs-dismiss="offcanvas">
-                Book Your Dream Kitchen
+                Meet Our Designers
             </button>
         </div>
     </div>
-    </div>
-  )
+  );
 }
-
-export default Home3

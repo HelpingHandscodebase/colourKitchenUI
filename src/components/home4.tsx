@@ -2,6 +2,10 @@ import img1 from '/img/Photo/img1.jpg';
 import img2 from '/img/Photo/img2.jpg';
 import img3 from '/img/Photo/img3.jpg';
 
+import img4 from '/colours-kitchen-img/colours-kitchen.jpg';
+import img5 from '/colours-kitchen-img/colours-kitchen1.jpg';
+import img6 from '/colours-kitchen-img/colours-kitchen2.jpg'; 
+
 const Home4 = () => {
   return (
     <div className="container text-center py-5">
@@ -9,7 +13,7 @@ const Home4 = () => {
         <div className="row g-4 justify-content-evenly">
           <div className="col-12 col-md-4">
             <img
-              src={img1}
+              src={img4}
               className="img-fluid rounded shadow-sm"
               alt="Stylish Dining Hall Design"
             />
@@ -17,7 +21,7 @@ const Home4 = () => {
           </div>
           <div className="col-12 col-md-4">
             <img
-              src={img2}
+              src={img5}
               className="img-fluid rounded shadow-sm"
               alt="Stylish Bedroom Design"
             />
@@ -25,7 +29,7 @@ const Home4 = () => {
           </div>
           <div className="col-12 col-md-4">
             <img
-              src={img3}
+              src={img6}
               className="img-fluid rounded shadow-sm"
               alt="A Minimal with Blue Toned Bedroom"
             />

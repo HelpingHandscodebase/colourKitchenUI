@@ -1,14 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 
-const Navigation = () => {
-  const navigate = useNavigate();
+const Navigation = ({ onQuoteClick }: { onQuoteClick: () => void }) => {
   const gradientTextStyle = {
-  fontSize: '40px',
-   background: 'radial-gradient(circle, red, yellow)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-}
+    fontSize: '40px',
+    background: 'radial-gradient(circle, red, yellow)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  };
 
   return (
     <>
@@ -17,13 +16,13 @@ const Navigation = () => {
         <div className="container-fluid">
 
           {/* Brand */}
-          <Link className="navbar-brand fw-bold py-4" to="/" style={gradientTextStyle} >
+          <Link className="navbar-brand fw-bold py-4" to="/" style={gradientTextStyle}>
             Colors Kitchen
           </Link>
 
           {/* TOGGLER (MOBILE ONLY) */}
           <button
-            className="navbar-toggler d-md-none" 
+            className="navbar-toggler d-md-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#mobileMenu"
@@ -31,7 +30,7 @@ const Navigation = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* DESKTOP + TABLET MENU (md and above) */}
+          {/* DESKTOP + TABLET MENU */}
           <div className="collapse navbar-collapse d-none d-md-flex" id="desktopMenu">
             <ul className="navbar-nav ms-auto gap-4">
 
@@ -56,14 +55,16 @@ const Navigation = () => {
                   className="nav-link fs-4 d-flex align-items-center"
                   href="https://wa.me/9993690392"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <FaWhatsapp />
                 </a>
               </li>
 
               <li>
-                <button onClick={() => navigate("./about")} className="btn btn-danger px-4 py-2 rounded-3 shadow-sm">
+                <button
+                  onClick={onQuoteClick}
+                  className="btn btn-danger px-4 py-2 rounded-3 shadow-sm"
+                >
                   Get Free Quote
                 </button>
               </li>
@@ -73,7 +74,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* MOBILE SIDEBAR MENU (offcanvas) */}
+      {/* MOBILE SIDEBAR MENU */}
       <div className="offcanvas offcanvas-end" tabIndex={-1} id="mobileMenu">
         <div className="offcanvas-header">
           <h5 className="offcanvas-title">Menu</h5>
@@ -84,27 +85,19 @@ const Navigation = () => {
           <ul className="navbar-nav gap-3">
 
             <li className="nav-item">
-              <Link className="nav-link" to="/home" data-bs-dismiss="offcanvas">
-                HOME
-              </Link>
+              <Link className="nav-link" to="/home" data-bs-dismiss="offcanvas">HOME</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/about" data-bs-dismiss="offcanvas">
-                ABOUT
-              </Link>
+              <Link className="nav-link" to="/about" data-bs-dismiss="offcanvas">ABOUT</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/project" data-bs-dismiss="offcanvas">
-                PROJECT
-              </Link>
+              <Link className="nav-link" to="/project" data-bs-dismiss="offcanvas">PROJECT</Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/services" data-bs-dismiss="offcanvas">
-                SERVICES
-              </Link>
+              <Link className="nav-link" to="/services" data-bs-dismiss="offcanvas">SERVICES</Link>
             </li>
 
             <li className="nav-item">
@@ -114,7 +107,11 @@ const Navigation = () => {
             </li>
 
             <li>
-              <button onClick={() => navigate("./about")} className="btn btn-danger w-100 shadow-sm" data-bs-dismiss="offcanvas">
+              <button
+                onClick={onQuoteClick}
+                className="btn btn-danger w-100 shadow-sm"
+                data-bs-dismiss="offcanvas"
+              >
                 Get Free Quote
               </button>
             </li>
